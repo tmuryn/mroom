@@ -15,15 +15,14 @@
  */
 package org.springframework.samples.petclinic.repository.springdatajpa;
 
-import java.util.Collection;
+import org.springframework.samples.petclinic.model.Owner;
+import org.springframework.samples.petclinic.repository.OwnerRepository;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-import org.springframework.samples.petclinic.model.Owner;
-import org.springframework.samples.petclinic.repository.OwnerRepository;
-import org.springframework.stereotype.Repository;
+import java.util.Collection;
 
 /**
  * Using native JPA instead of Spring Data JPA here because of this query: "SELECT owner FROM Owner owner left join
