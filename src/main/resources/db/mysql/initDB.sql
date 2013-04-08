@@ -58,3 +58,9 @@ CREATE TABLE IF NOT EXISTS visits (
   description VARCHAR(255),
   FOREIGN KEY (pet_id) REFERENCES pets(id)
 ) engine=InnoDB;
+
+CREATE TABLE IF NOT EXISTS geo_location(
+  location VARCHAR (255) PRIMARY KEY ,
+  location_name varchar (255),
+  INDEX(location)
+) engine=InnoDB;

@@ -16,7 +16,6 @@
 package org.springframework.samples.petclinic.model;
 
 import org.hibernate.annotations.Type;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -42,7 +41,6 @@ public class Visit extends BaseEntity {
     /**
      * Holds value of property description.
      */
-    @NotEmpty
     @Column(name = "description")
     private String description;
 

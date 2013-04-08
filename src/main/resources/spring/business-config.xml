@@ -15,8 +15,7 @@
     <!-- import the dataSource definition -->
     <import resource="datasource-config.xml"/>
 
-    <context:component-scan
-            base-package="org.springframework.samples.petclinic.service"/>
+    <context:component-scan base-package="org.springframework.samples.petclinic.service"/>
 
     <!-- Configurer that replaces ${...} placeholders with values from a properties file -->
     <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
@@ -67,22 +66,5 @@
         </bean>
 
         <context:component-scan base-package="org.springframework.samples.petclinic.repository.jdbc"/>
-    </beans>
-
-    <beans profile="jpa">
-        <!--
-            Will automatically be transactional due to @Transactional.
-            EntityManager will be auto-injected due to @PersistenceContext.
-            PersistenceExceptions will be auto-translated due to @Repository.
-        -->
-        <context:component-scan base-package="org.springframework.samples.petclinic.repository.jpa"/>
-    </beans>
-
-    <beans profile="spring-data-jpa">
-        <jpa:repositories base-package="org.springframework.samples.petclinic.repository.springdatajpa"/>
-
-        <!-- Custom configuration for the custom implementation based on JPA -->
-        <bean id="ownerRepository"
-              class="org.springframework.samples.petclinic.repository.springdatajpa.JpaOwnerRepositoryImpl"/>
     </beans>
 </beans>

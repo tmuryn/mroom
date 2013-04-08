@@ -38,14 +38,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author Ken Krebs
- * @author Juergen Hoeller
- * @author Rob Harrop
- * @author Sam Brannen
- * @author Thomas Risberg
- * @author Mark Fisher
- */
 @Repository
 public class JdbcPetRepositoryImpl implements PetRepository {
 
