@@ -12,6 +12,7 @@
         <intercept-url pattern="/" access="permitAll"/>
         <intercept-url pattern="/**" access="isAuthenticated()" />
         <form-login />
+        <logout />
         <remember-me/>
     </http>
 
